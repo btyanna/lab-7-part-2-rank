@@ -44,3 +44,17 @@ mwu_kermit # p = 0.4001
 ```
 
 There is no sig difference for pre and post-talk Kermit scores between males and females.
+
+
+COLLABORATOR: IS there a significant difference in Kermit ranks for pre-talk and post-talk scores (ignoring all other variables)? (This is a two-tailed test--there's no directionality to this.)
+
+Null: No difference
+
+```{r}
+
+wsr_kermit <- wilcox.test(kermit$Score.pre, kermit$Score.post, paired = TRUE) #Data are paired
+wsr_kermit
+
+# Conclusion: There is no significant diffference in Kermit rankings before and after his talk (summary...)
+```
+
