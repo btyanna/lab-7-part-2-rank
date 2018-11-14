@@ -29,3 +29,18 @@ kermit_hist
 
 ```
 
+Creator: Gonna do some rank-based testing 
+
+Is there a sig difference in pre-talk Kermit scores for males and females?
+
+Our data is unpaired so will need to use Mann-Whitney U
+```{r}
+# Unpaired: Mann-Whitney U
+
+mwu_kermit = kermit %>% 
+  wilcox.test(Score.pre ~ Gender, data = .)
+mwu_kermit # p = 0.4001
+
+```
+
+There is no sig difference for pre and post-talk Kermit scores between males and females.
