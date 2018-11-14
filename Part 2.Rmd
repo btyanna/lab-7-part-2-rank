@@ -10,3 +10,22 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Hi. Hello. Hi. Hello. :)
+
+Collaborator (It's Kristan and I'm the collaborator, and I'm going to make some histograms.)
+
+```{r}
+#Loaded tidyverse, read in data
+library(tidyverse)
+kermit <- read_csv("kermit.csv")
+
+#Made a histogram
+kermit_hist <- ggplot(kermit, aes(x = Score.pre)) +
+  geom_histogram() +
+  facet_wrap(~ Gender)
+
+kermit_hist
+
+
+
+```
+
